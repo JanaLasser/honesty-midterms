@@ -182,3 +182,4 @@ data/poll_analysis
 *.csv.gzip
 data/metadata-2022110801.csv
 data/midterm_candidate_timelines/
+data/midterm_candidates_unraveled_urls.csv.xz
