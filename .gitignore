@@ -175,3 +175,5 @@ cython_debug/
 
 # custom
 *.eml
+code/poll_analysis
+data/poll_analysis
