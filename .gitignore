@@ -180,3 +180,4 @@ code/exploratory
 data/poll_analysis
 *.jsonl
 *.csv.gzip
+data/metadata-2022110801.csv
