@@ -176,5 +176,7 @@ cython_debug/
 # custom
 *.eml
 code/poll_analysis
+code/exploratory
 data/poll_analysis
 *.jsonl
+*.csv.gzip
