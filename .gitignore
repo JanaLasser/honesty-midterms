@@ -185,4 +185,5 @@ data/midterm_candidate_timelines/
 data/midterm_candidates_unraveled_urls.csv.xz
 data/primaries_for_margin_research.csv
 data/primaries_for_margin_research_RW.csv
+data/utilities/sentence-transformers/
 
