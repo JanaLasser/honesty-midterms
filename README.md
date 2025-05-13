@@ -1,5 +1,7 @@
 # Workflow data preparation
-* in: candidates_exp09142022.csv -> clean_KnowWho_data.ipynb loads and cleans the raw midterm candidate lists from KnowWho -> out: KnowWho_profiles_clean.csv
+* `clean_KnowWho_data.ipynb': loads and cleans the raw midterm candidate lists from KnowWho
+    * in: candidates_exp09142022.csv
+    * out: KnowWho_profiles_clean.csv
 * in: KnowWho_profiles_clean.csv, polls_matched.csv -> get_twitter_profiles.ipynb retrieves the profile information from the Twitter API -> out: candidate_twitter_profiles.csv
 * in: candidate_twitter_profiles.csv -> get_twitter_timelines.ipynb retrieves the timelines of candidates from the Twitter API, cleans and combines all timelines, extracts URLs for unravelling, organises URL unravelling -> out: combined_midterm_candidate_timelines_2022-01-01_to_2023-05-01_clean.csv.gzip, combined_midterm_candidate_timelines_2022-01-01_to_2023-05-01_clean_tweetIDs.txt, midterm_candidates_unraveled_urls.csv.xz (not needed for this analysis)
 * in: combined_midterm_candidate_timelines_2022-01-01_to_2023-05-01_clean.csv.gzip, utilities -> label_glove840B_DDR.sh computes belief-speaking and fact-speaking scores of tweets -> out: combined_midterm_candidate_timelines_2022-01-01_to_2023-05-01_honesty_component_scores.csv.gzip
