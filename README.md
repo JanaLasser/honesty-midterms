@@ -1,9 +1,9 @@
 # Workflow data preparation
 * **clean_KnowWho_data.ipynb**: Loads and cleans the raw midterm candidate lists from KnowWho.
     * in:
-          * candidates_exp09142022.csv (from [KnowWho](https://kw1.knowwho.com/candidate-data/candidate-lists/))
+      * candidates_exp09142022.csv (from [KnowWho](https://kw1.knowwho.com/candidate-data/candidate-lists/))
     * out:
-          * KnowWho_profiles_clean.csv
+      * KnowWho_profiles_clean.csv
 * **get_twitter_profiles.ipynb**: Retrieves the profile information of the midterm candidates from the Twitter API.
     * in:
           * KnowWho_profiles_clean.csv (from clean_KnowWho_data.ipynb)
