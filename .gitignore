@@ -178,13 +178,8 @@ cython_debug/
 *.jsonl
 *.svg
 utilities/
+data/
 code/poll_analysis
-code/exploratory
-data/poll_analysis
-data/old
-data/tmp
-data/raw/metadata-2022110801.csv
-data/raw/candidate_twitter_profiles_fivethirtyeight.csv
-data/raw/combined_midterm_candidate_timelines_2022-01-01_to_2023-05-01_clean.csv.gzip
+
 
 
