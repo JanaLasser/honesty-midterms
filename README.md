@@ -30,7 +30,7 @@ Note also that the reproduction materials do not contain raw tweet texts. Instea
       * `data/tmp/KnowWho_profiles_merged_twitter.csv`
       * `data/tmp/primaries_for_margin_research.csv`
       * `data/raw/primaries_for_margin_research_RW_JL.csv` (after manually adding the election margins and correcting errors)
-* **split_data.ipynb**: Splits the full candidate timelines into three data sets: (i) the study data set encompassing four weeks worth of tweets before and after each election, (ii) the first pilot data set encompassing all tweets from 2022-01-01 up to 16 weeks before each election, and (iii) the second pilot data set encompassing all tweets starting 16 weeks after each election and up to 2023-05-01. Creates the temporary files pilot_data1_text.csv.gzip, pilot_data2_text.csv.gzip and study_data_text.csv.gzip containing the tweet texts and IDs and calls the script **label_glove840B_DDR.sh** to calculate the honesty components from the tweet texts (see below).
+* **split_data.ipynb**: Splits the full candidate timelines into three data sets: (i) the study data set encompassing four weeks worth of tweets before and after each election, (ii) the first pilot data set encompassing all tweets from 2022-01-01 up to 16 weeks before each election, and (iii) the second pilot data set encompassing all tweets starting 16 weeks after each election and up to 2023-05-01. Creates the temporary files pilot_data1_text.csv.gzip, pilot_data2_text.csv.gzip and study_data_text.csv.gzip containing the tweet texts and IDs and calls the script `label_glove840B_DDR.sh` to calculate the honesty components from the tweet texts (see below).
     * in:
       * `data/raw/combined_midterm_candidate_timelines_2022-01-01_to_2023-05-01_clean.csv.gzip` (from `get_twitter_timelines.ipynb`)
       * `data/tmp/KnowWho_profiles_merged_twitter.csv` (from `merge_profile_data.ipynb`)
@@ -41,7 +41,7 @@ Note also that the reproduction materials do not contain raw tweet texts. Instea
       * `data/processed/study_data.csv.gzip` (study data minus tweet texts for power analysis)
       * `data/processed/pilot_data1.csv.gzip` (pilot data set 1 minus tweet texts for variance component estimation)
       * `data/processed/pilot_data2.csv.gzip` (pilot data set 2 minus tweet texts for variance component estimation)
-* **label_glove840B_DDR.sh** (calls compute_sbert_avg_lexicon.py internally): Computes belief-speaking and fact-speaking scores of tweets in the first pilot data set and second pilot data set.
+* **label_glove840B_DDR.sh** (calls `compute_sbert_avg_lexicon.py internally`): Computes belief-speaking and fact-speaking scores of tweets in the first pilot data set and second pilot data set.
     * in:
       * `data/tmp/pilot_data1_text.csv.gzip` (from `split_data.ipynb`)
       * `data/tmp/pilot_data2_text.csv.gzip` (from `split_data.ipynb`)
