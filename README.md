@@ -1,4 +1,9 @@
-# Workflow data preparation
+# Data processing and analysis code for publication "Belief-speaking in political races"
+This repository contains the data processing and analysis scripts for the publication "Belief-speaking in political races". Note that the full reproduction materials include the folders `data/` and `utilities` which are not located in this GitHub repository because they are too large. Instead, they have been uploaded to an accompanying OSF repository ([DOI: 10.17605/OSF.IO/4RG7P](https://doi.org/10.17605/OSF.IO/4RG7P)). To reproduce the work presented in the paper, download these two folders from the OSF repository and copy them into the main directory of this repository (at the same level as the folders `code`, `results`, and `plots`).
+
+Note also that the reproduction materials do not contain raw tweet texts. Instead, all derived statistics necessary to run the statistical modelling are provided, alongside all IDs of tweets used to derive the statistics. Given access to the Twitter API rehydration feature, tweets can be downloaded again as long as they haven't been deleted by the users. We are also willing to share tweet texts with other researchers for research purposes upon reasonable request. Furthermore, we do not publish the NewsGuard website ratings used for the exploratory analysis because they are proprietary. For researchers that do not have access to the NewsGuard ratings, we advise to use the alternative non-proproetary ratings published by Lin et al. (2023, DOI: [10.1093/pnasnexus/pgad286](https://doi.org/10.1093/pnasnexus/pgad286)).
+
+## Workflow data preparation
 * **clean_KnowWho_data.ipynb**: Loads and cleans the raw midterm candidate lists from KnowWho.
     * in:
       * data/raw/candidates_exp09142022.csv (from [KnowWho](https://kw1.knowwho.com/candidate-data/candidate-lists/))
@@ -45,9 +50,9 @@
       * utilities/sentence-transformers (sentence embedding model)
     * out:
       * data/tmp/pilot_data1_honesty_component_scores.csv.gzip
-      * data/tmp/pilot_data2_honesty_component_scores.csv.gzip
+      * data/tmp/pilot_data2_honesty_compone nt_scores.csv.gzip
      
-# Workflow analysis
+## Workflow analysis
 * **estimate_variance_factors_pilot_data.ipynb**: Estimates the different variance factors from the pilot data for the power analysis.
     * in:
         * data/processed/pilot_data1.csv.gzip
@@ -89,7 +94,7 @@
   * out:
     * plots/data_distribution.pdf
 
-# Exploratory: trustworthiness analysis
+## Exploratory: trustworthiness analysis
 * **exploratory_create_url_data.ipynb**: Creates an URL data frame and aggregates the Twitter information with NewsGuard scores.
     * in:
       * data/raw/combined_midterm_candidate_timelines_2022-01-01_to_2023-05-01_clean.csv.gzip (from get_twitter_timelines.ipynb)
