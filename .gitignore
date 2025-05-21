@@ -175,20 +175,16 @@ cython_debug/
 
 # custom
 *.eml
+*.jsonl
+*.svg
+utilities/
 code/poll_analysis
 code/exploratory
 data/poll_analysis
-*.jsonl
-*.csv.gzip
-data/metadata-2022110801.csv
-data/midterm_candidate_timelines/
-data/midterm_candidates_unraveled_urls.csv.xz
-data/primaries_for_margin_research.csv
-data/primaries_for_margin_research_RW.csv
-data/utilities/sentence-transformers/
 data/old
-data/user_batches
-data/utilities/url_shorteners.txt
-/data/midterm_candidate_profiles/candidate_twitter_profiles_fivethirtyeight.csv
+data/tmp
+data/raw/metadata-2022110801.csv
+data/raw/candidate_twitter_profiles_fivethirtyeight.csv
+data/raw/combined_midterm_candidate_timelines_2022-01-01_to_2023-05-01_clean.csv.gzip
 
 
